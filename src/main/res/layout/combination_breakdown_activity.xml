@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Topic and Amount -->
+    <TextView
+        android:id="@+id/tvCustomBreakdownTopic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Combination Breakdown"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/tvTopicCurrencyAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:text="Topic: [Topic] | Currency: [Currency] | Amount: [Amount]"
+        android:textSize="16sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+
+
+        <!-- Root LinearLayout to hold the static content and llPersonContainer -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Percentage and Ratio Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/tvPercentage"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="Percentage"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:background="#800080"
+                    />
+
+                <TextView
+                    android:id="@+id/tvAmount"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="Amount"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:background="#800080"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvCustomBreakdownResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Combination Breakdown Result:"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"
+                android:textStyle="bold"/>
+
+            <!-- llPersonContainer inside ScrollView as before -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:id="@+id/llPersonContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical"
+                    />
+
+
+
+            </ScrollView>
+
+            <Button
+                android:id="@+id/btnCalculateCombinationBreakdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calculate Combination Breakdown"
+                android:background="@drawable/button_selector_navi"
+                android:textColor="@drawable/button_text_color_selector" />
+
+
+
+
+            <!-- Save and Discard buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="#800080"
+                    android:text="Save"
+
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/btnDiscard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Discard"
+                    android:textColor="#FFFFFF"
+                    android:background="#800080"/>
+
+                <Button
+                    android:id="@+id/btnEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-145dp"
+                    android:layout_marginTop="4dp"
+                    android:background="#F0CEFF"
+                    android:text="Edit"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+
+
+
+
+
+            <!-- WhatsApp and Home Buttons -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp">
+
+                <ImageButton
+                    android:id="@+id/btnWhatsApp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="WhatsApp"
+                    android:padding="4dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/whatsapp" />
+
+                <ImageButton
+                    android:id="@+id/btnHome"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="16dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Home"
+                    android:padding="4dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/home_icon" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ... other layout elements ... -->
+
+</LinearLayout>
+
+

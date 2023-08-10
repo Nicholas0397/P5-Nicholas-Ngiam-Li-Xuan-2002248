@@ -1,0 +1,79 @@
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- ... Other views ... -->
+
+    <LinearLayout
+        android:id="@+id/llPersonPercentage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvCustomBreakdownTopic">
+
+        <!-- Person Number -->
+        <TextView
+            android:id="@+id/tvPersonNumberPercentage"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:text="Friend A"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Friend Name -->
+        <EditText
+            android:id="@+id/etFriendName"
+            android:layout_width="275dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:hint="Friend Name (e.g., Friend A)"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:textSize="16sp" />
+
+
+        <LinearLayout
+            android:id="@+id/llPercentageInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+        <!-- Percentage EditText -->
+        <EditText
+            android:id="@+id/etPercentage"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:hint="Percentage"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvPercentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="%"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <!-- Calculated Pay Amount -->
+        <TextView
+            android:id="@+id/tvPayAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Pay: RM 0.00"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fabWhatsApp"
+        android:layout_alignParentTop="true">-->
+    <!-- Topic, Currency, and Amount -->
+    <TextView
+        android:id="@+id/tvEqualBreakdownTopic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:text="Equal Breakdown"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvTopicCurrencyAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:text="Topic: [Topic] | Currency: [Currency] | Amount: [Amount]"
+        android:textSize="16sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+        <!-- Root LinearLayout to hold the static content and llPersonContainer -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Vertical LinearLayout to hold "Equal Breakdown Result" and "Calculate Equal Breakdown" -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- "Equal Breakdown Result" TextView -->
+
+                <Button
+                    android:id="@+id/btnCalculateEqualBreakdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Calculate Equal Breakdown"
+                    android:background="@drawable/button_selector_navi"
+                    android:textColor="@drawable/button_text_color_selector"/>
+
+                <TextView
+                    android:id="@+id/tvEqualBreakdownResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Equal Breakdown Result:"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- "Calculate Equal Breakdown" Button -->
+            </LinearLayout>
+
+            <!-- llPersonContainer inside ScrollView as before -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:id="@+id/llPersonContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!-- Existing person views will be added here dynamically -->
+                </LinearLayout>
+            </ScrollView>
+
+            <!-- Add any other static content here if needed -->
+            <!-- Save and Discard buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Save"
+                    android:textColor="#FFFFFF"
+                    android:background="#800080"/>
+
+                <Button
+                    android:id="@+id/btnDiscard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Discard"
+                    android:textColor="#FFFFFF"
+                    android:background="#800080"/>
+
+                <Button
+                    android:id="@+id/btnEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="-145dp"
+                    android:textColor="#000000"
+                    android:background="#F0CEFF"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".equal_breakdown_activity">
+
+                <!-- Your existing layout elements -->
+
+                <ImageButton
+                    android:id="@+id/btnWhatsApp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/generate_pdf"
+                    android:padding="4dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/whatsapp" />
+
+                <ImageButton
+                    android:id="@+id/btnHome"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="16dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/generate_pdf"
+                    android:padding="4dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/home_icon" />
+
+            </RelativeLayout>
+
+            <!--<ImageButton
+                android:id="@+id/btnHome"
+                android:layout_width="136dp"
+                android:layout_height="50dp"
+                android:background="@drawable/button_selector_navi"
+                android:padding="5dp"
+                android:layout_gravity="bottom"
+                android:scaleType="fitCenter"
+                android:textColor="@drawable/button_text_color_selector"
+                app:srcCompat="@drawable/home_icon" />-->
+
+            </LinearLayout>
+        </ScrollView>
+    <!--</ScrollView>-->
+   <!-- &lt;!&ndash; FloatingActionButton for WhatsApp &ndash;&gt;
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabWhatsApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/whatsapp"
+        app:backgroundTint="@color/colorAccent"
+        app:fabSize="normal"
+        app:rippleColor="@color/colorPrimaryDark"
+        tools:ignore="ContentDescription" />-->
+
+
+
+
+</LinearLayout>

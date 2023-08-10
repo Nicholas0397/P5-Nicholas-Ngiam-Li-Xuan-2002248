@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">mad_assignment_1.3</string>
+    <string name="generate_pdf">Generate PDF</string>
+    <string-array name="status_array">
+        <item>Paid</item>
+        <item>Unpaid</item>
+        <!-- Add more items as needed -->
+    </string-array>
+</resources>
